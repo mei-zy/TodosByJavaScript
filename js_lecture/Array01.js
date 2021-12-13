@@ -1,20 +1,18 @@
 const todos = [
-  { id: 3, content: "HTML", completed: false },
-  { id: 2, content: "CSS", completed: true },
-  { id: 1, content: "Javascript", completed: false },
+  { id: 3, content: 'HTML', completed: false },
+  { id: 2, content: 'CSS', completed: true },
+  { id: 1, content: 'Javascript', completed: false },
 ];
 
-const render = (todos) =>
+const render = todos =>
   todos
     .map(
-      (todo) => `
-      <li id="${todo.id}">
-        <label><input type="checkbox" ${todo.completed ? "checked" : ""}>${
-        todo.content
-      }</label>
+      ({ id, content, completed }) =>
+        `<li id="${id}">
+        <label><input type="checkbox" ${completed ? 'checked' : ''}>${content}</label>
       </li>`
     )
-    .join("");
+    .join('');
 
 console.log(render(todos));
 /*
