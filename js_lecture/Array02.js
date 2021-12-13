@@ -4,10 +4,7 @@ const todos = [
   { id: 1, content: "Javascript", completed: false },
 ];
 
-const getValues = (todos, key) => {
-  return todos.map((todo) => todo[key]);
-  /* Do something */
-};
+const getValues = (todos, key) => todos.map((todo) => todo[key]);
 
 console.log(getValues(todos, "id")); // [3, 2, 1]
 console.log(getValues(todos, "content")); // ['HTML', 'CSS', 'Javascript']
