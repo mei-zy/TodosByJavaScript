@@ -1,13 +1,7 @@
 // 유효한팰린드롬
-function isPalindrome(str) {
-  const palinstr = str.toLowerCase().replace(/[^a-z]/g, "");
-  const checkpalinstr = str
-    .toLowerCase()
-    .split("")
-    .reverse()
-    .join()
-    .replace(/[^a-z]/g, "");
-  console.log(palinstr === checkpalinstr);
-}
-isPalindrome("A man, a plan, a canal: Panama"); // => true
-isPalindrome("race a car"); // => false
+isPalindrome = str => {
+  const palinstr = str.toLowerCase().replace(/[^a-z]/g, '');
+  return palinstr === [...palinstr].reverse().join('');
+};
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // => true
+console.log(isPalindrome('race a car')); // => false

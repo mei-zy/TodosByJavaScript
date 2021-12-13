@@ -1,5 +1,9 @@
-// 1. A를 #으로 변경
-function replaceAtoSharp(str) {
-  console.log(str.replace(/A/g, "#"));
-}
-replaceAtoSharp("BANAaNA"); // => B#N#N#
+replaceAtoSharp = str => str.replace(/A/g, '#');
+
+// replaceAtoSharp = str =>
+//   str
+//     .split('')
+//     .map(word => (word === 'A' ? '#' : word))
+//     .join('');
+
+console.log(replaceAtoSharp('BANAaNA')); // => B#N#N#
