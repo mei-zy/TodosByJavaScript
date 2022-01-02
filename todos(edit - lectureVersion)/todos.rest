@@ -1,0 +1,39 @@
+GET http://localHost:9000/todos
+
+### 
+POST http://localHost:9000/todos
+Content-Type: application/json
+
+{
+  "id" : 4, "content" : " test" , "completed" : false
+}
+
+
+###
+# payload = > {content} of {completed}
+PATCH http://localHost:9000/todos/4
+Content-Type: application/json
+
+{
+  "completed" : true
+}
+
+{
+  "content" : "ABCD"
+}
+
+### 
+PATCH http://localHost:9000/todos
+Content-Type: application/json
+
+{
+  "completed" : true 
+}
+
+###
+DELETE http://localHost:9000/todos/3
+
+
+###
+# 일괄 delete 하는 경우
+DELETE http://localHost:9000/todos?completed=true
